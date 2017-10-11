@@ -1,0 +1,16 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+  font-family: 'Lato','Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Sans-Serif';
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}

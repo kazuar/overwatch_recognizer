@@ -4,7 +4,6 @@
 {% block title %}Home{% endblock %}
 {% block body %}
 <div class="jumbotron">
-  <h1>Flask Is Awesome</h1>
-  <p class="lead">And I'm glad to be learning so much about it!</p>
+  <img class="img-responsive" src=" {{url_for('send_unlabeled_image', filename=file_path)}}">
 </div>
 {% endblock %}
