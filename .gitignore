@@ -104,3 +104,4 @@ ENV/
 images/*
 unlabeled_images/*
 labeled_images/*
+resources/*

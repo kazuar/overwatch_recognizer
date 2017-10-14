@@ -6,6 +6,8 @@ import traceback
 import datetime
 from progressbar import ProgressBar
 
+import crawler_utils
+
 __version__ = '1.0.5'
 client_id = "<CLIENT_ID>"
 
@@ -14,12 +16,6 @@ def convert_url_to_file_path(url):
     file_name = url.split("/")[-1].replace(".jpg", "") + str(math.floor(time.time()))
     file_path = "images/{0}.jpg".format(file_name)
     return file_path
-
-
-def download_image(image_url, image_path):
-    with open(image_path, "wb") as output_file:
-        content = requests.get(image_url).content
-        output_file.write(content)
 
 
 def send_request(url):
@@ -79,7 +75,7 @@ def download_images_by_game(game_name):
     pbar = ProgressBar()
     for image_url in pbar(image_urls):
         image_path = convert_url_to_file_path(image_url)
-        download_image(image_url, image_path)
+        crawler_utils.download_image(image_url, image_path)
 
 
 def collect_images_periodically(game_name, wait_time_between_samples=600):
